@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Merchandise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+/* Import Font */
+@font-face {
+    font-family: "RockSalt";
+    src: url("../fonts/RockSalt-Regular.ttf") format("truetype");
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-family: "RockSalt", Arial, sans-serif;
+}
+
+.logo {
+    width: 80px;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.hero {
+    background: #f44336;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #f44336;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Product Section */
+.product-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.product {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.add-to-cart {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Cart Summary */
+.cart-summary {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    width: 200px;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="logo.4.JPG" alt="Musical Merchandise Logo" class="logo">
+        <h1>Musical Merchandise</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#tshirts">T-Shirts</a></li>
+                <li><a href="#posters">Posters</a></li>
+                <li><a href="#instruments">Instruments</a></li>
+                <li><a href="#cds">CDs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Welcome to Musical Merchandise!</h2>
+            <p>Your one-stop shop for music-themed items</p>
+            <button class="cta-button">Shop Now</button>
+        </section>
+
+        <!-- Product Sections -->
+        <section id="tshirts" class="product-section">
+            <h3>T-Shirts</h3>
+            <div class="product">
+                <img src="T-shirt.JPG" alt="T-Shirt"><br></br>
+                <img src="T-shirt1.JPG" alt="T-Shirt"><br></br>
+                <img src="t-shirt3.JPG" alt="T-Shirt"><br></br>
+                <img src="t-shirt4.JPG" alt="T-Shirt"><br></br>
+
+                <h4>Rock Band T-Shirt</h4>
+                <p>$20.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="posters" class="product-section">
+            <h3>Posters</h3>
+            <div class="product">
+                <img src="poster.JPG" alt="Poster">
+                <img src="poster1.JPG" alt="Poster">
+                <img src="poster2.JPG" alt="Poster">
+                <img src="poster3.JPG" alt="Poster">
+                <h4>Music Poster</h4>
+                <p>$15.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="instruments" class="product-section">
+            <h3>Instruments</h3>
+            <div class="product">
+                <img src="instrument.JPG" alt="Instrument">
+                <img src="instrument2.JPG" alt="Instrument">
+                <img src="instrument3.JPG" alt="Instrument">
+                <img src="instrument5.JPG" alt="Instrument">
+                <h4>Electric Guitar</h4>
+                <p>$250.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="cds" class="product-section">
+            <h3>CDs</h3>
+            <div class="product">
+                <img src="cds2.JPG" alt="CD">
+                <img src="cds1.JPG" alt="CD">
+                <img src="cds3.JPG" alt="CD">
+                <img src="cds4.JPG" alt="CD">
+                <h4>Rock Album CD</h4>
+                <p>$10.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Summary Section -->
+    <aside class="cart-summary">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Musical Merchandise. All rights reserved.</p>
+    </footer>
+
+    <script src="js/js.js"></script>
+</body>
+</html>
